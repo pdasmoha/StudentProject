@@ -3,7 +3,7 @@ package com.capgemini;
 public class StudentSchedular {
 	
 	private Student[] students = new Student[10];
-	private int counterStudent=0;
+	private int counterStudent;
 	
 	public String addStudent(int rollNumber,String name, String[] courseNames)
 	{
@@ -30,7 +30,7 @@ public class StudentSchedular {
 		return "No student found..";
 	}
 	
-	public boolean isExist(int rollNumber){
+	public boolean isRollNumberPresent(int rollNumber){
 		for (int i = 0; i < counterStudent; i++) {
 			if(rollNumber==students[i].getRollNumber()){
 				return true;
