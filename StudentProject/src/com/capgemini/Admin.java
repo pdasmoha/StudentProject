@@ -70,7 +70,7 @@ public class Admin {
 			case 3:
 				return;
 			default:
-				System.out.println("Sorry entered wrong choice");
+				System.err.println("Sorry entered wrong choice");
 
 			}
 
@@ -96,11 +96,11 @@ public class Admin {
 					break;
 				}
 				else{
-					System.out.println("Value should be > 0");
+					System.err.println("Value should be > 0");
 					System.out.println(TRY_AGAIN_MSG);
 				}
 			} catch (Exception e) {
-				System.out.println(WRONG_NUMBER_MSG);
+				System.err.println(WRONG_NUMBER_MSG);
 				System.out.println(TRY_AGAIN_MSG);
 				sc.nextLine();
 			}
@@ -121,18 +121,18 @@ public class Admin {
 			try {
 				rollNumber = sc.nextInt();
 				if(rollNumber>0){
-					if(!studSch.isExist(rollNumber))
+					if(!studSch.isRollNumberPresent(rollNumber))
 						break;
 					else{
 						System.out.println("This roll number is aleardy exist. Please try another one.");
 					}
 				}
 				else{
-					System.out.println("Value should be > 0");
+					System.err.println("Value should be > 0");
 					System.out.println(TRY_AGAIN_MSG);
 				}
 			} catch (Exception e) {
-				System.out.println(WRONG_NUMBER_MSG);
+				System.err.println(WRONG_NUMBER_MSG);
 				System.out.println(TRY_AGAIN_MSG);
 				sc.nextLine();
 			}
@@ -158,11 +158,11 @@ public class Admin {
 					System.out.println(studSch.addStudent(rollNumber, name, courseNames));
 					break;
 				} else {
-					System.out.println("Value should be > 0");
+					System.err.println("Value should be > 0");
 					System.out.println(TRY_AGAIN_MSG);
 				}
 			} catch (Exception e) {
-				System.out.println(WRONG_NUMBER_MSG);
+				System.err.println(WRONG_NUMBER_MSG);
 				System.out.println(TRY_AGAIN_MSG);
 				sc.nextLine();
 			}
